@@ -20,3 +20,7 @@ into that directory so edits here stay live:
 ```sh
 ln -s "$PWD/nz-grocery-compare" ~/.claude/skills/nz-grocery-compare
 ```
+
+## License
+
+[MIT](LICENSE)
