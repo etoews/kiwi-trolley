@@ -1,5 +1,5 @@
 {
-  "skill_name": "kiwi-cart-comparison",
+  "skill_name": "comparison",
   "note": "Evals cover the two reproducible, offline-testable surfaces of the skill: (1) building the interactive comparison report from a captured dataset, and (2) the item-matching/flagging judgement. The live browser-automation surface (reading carts, adding to carts across the real supermarket sites) needs an authenticated Chrome session and cannot be benchmarked deterministically.",
   "evals": [
     {

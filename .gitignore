@@ -5,7 +5,7 @@
 __pycache__/
 *.pyc
 
-# kiwi-cart-comparison runtime output (generated when the skill runs)
+# comparison skill runtime output (generated when the skill runs)
 comparison-report-*.html
 totals-over-time-*.html
 totals-history.json

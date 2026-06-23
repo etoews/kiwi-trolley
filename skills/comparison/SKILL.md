@@ -1,5 +1,5 @@
 ---
-name: kiwi-cart-comparison
+name: comparison
 description: >-
   Comparison-shop a grocery basket across New Zealand's main supermarket websites
   — Woolworths (woolworths.co.nz), and the Foodstuffs sites New World

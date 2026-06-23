@@ -1,25 +1,40 @@
-# skills
+# kiwi-trolley
 
-My personal [Claude Code](https://docs.claude.com/en/docs/claude-code) [agent skills](https://docs.claude.com/en/docs/claude-code/skills).
+A [Claude Code](https://docs.claude.com/en/docs/claude-code) [plugin](https://code.claude.com/docs/en/plugins)
+of New Zealand grocery tooling.
 
-Each top-level directory is a self-contained skill: a `SKILL.md` plus any
-`references/`, `scripts/`, `assets/` and `evals/` it needs.
+The plugin bundles [skills](https://docs.claude.com/en/docs/claude-code/skills) under `skills/`.
+Right now there is one.
 
 ## Skills
 
-- **[kiwi-cart-comparison](kiwi-cart-comparison/)**: comparison-shop a grocery basket
-  across New Zealand's main supermarket sites (Woolworths, New World, PAK'nSAVE and
-  Four Square), reconcile the real cart prices, and build an interactive HTML
-  price-comparison report plus an over-time trend report.
+- **[comparison](skills/comparison/)**: comparison-shop a grocery basket across New
+  Zealand's main supermarket sites (Woolworths, New World, PAK'nSAVE and Four Square),
+  reconcile the real cart prices, and build an interactive HTML price-comparison report
+  plus an over-time trend report. Invoked as `kiwi-trolley:comparison`.
 
 ## Installing
 
-Claude Code loads skills from `~/.claude/skills/`. Symlink each skill from this repo
-into that directory so edits here stay live:
+Add this repo as a plugin marketplace, then install the plugin:
 
-```sh
-ln -s "$PWD/kiwi-cart-comparison" ~/.claude/skills/kiwi-cart-comparison
 ```
+/plugin marketplace add etoews/kiwi-trolley
+/plugin install kiwi-trolley@kiwi-trolley
+```
+
+## Developing
+
+To work on the plugin against a live checkout, point a marketplace at this directory
+and install from it:
+
+```
+/plugin marketplace add /path/to/kiwi-trolley
+/plugin install kiwi-trolley@kiwi-trolley
+```
+
+The plugin manifest is `.claude-plugin/plugin.json`. Each skill is a self-contained
+`skills/<name>/` directory: a `SKILL.md` plus any `references/`, `scripts/`, `assets/`
+and `evals/` it needs.
 
 ## License
 
